@@ -1,22 +1,50 @@
-
-[{
-  "name": "Bursary1",
-  "url": "www.example.com",
-  "description": "ergafshgresfgsdgedgdsg",
-  "photo": "../Resources/Placeholder.png"
-},
-
-{
-  "name": "Bursary2",
-  "url": "www.example.com",
-  "description": "ergafshgresfgsdgedgdsg",
-  "photo": "../Resources/Placeholder.png"
-},
-
-{
-  "name": "Bursary3",
-  "url": "www.example.com",
-  "description": "ergafshgresfgsdgedgdsg",
-  "photo": "../Resources/Placeholder.png"
-}]
-
+[
+  {
+    "name": "Bursary1",
+    "url": "www.example.com",
+    "description": "Description Description Description Description Description666",
+    "photo": "../Resources/Placeholder.png",
+    "tag": "IT",
+    "popupID": "popup1"
+  },
+  {
+    "name": "Bursary2",
+    "url": "www.example.co2",
+    "description": "Description Description Description Description Description555",
+    "photo": "../Resources/Placeholder.png",
+    "tag": "Art",
+    "popupID": "popup2"
+  },
+  {
+    "name": "Bursary3",
+    "url": "www.example3.com",
+    "description": "Description Description Description Description Description444",
+    "photo": "../Resources/Placeholder.png",
+    "tag": "Business",
+    "popupID": "popup3"
+  },
+  {
+    "name": "Bursary4",
+    "url": "www.example4.com",
+    "description": "Description Description Description Description Description333",
+    "photo": "../Resources/Placeholder.png",
+    "tag": "Music",
+    "popupID": "popup4"
+  },
+  {
+    "name": "Bursary5",
+    "url": "www.example4.com",
+    "description": "Description Description Description Description Description222",
+    "photo": "../Resources/Placeholder.png",
+    "tag": "Science",
+    "popupID": "popup5"
+  },
+  {
+    "name": "Bursary6",
+    "url": "www.example4.com",
+    "description": "Description Description Description Description Description111",
+    "photo": "../Resources/Placeholder.png",
+    "tag": "Drama",
+    "popupID": "popup6"
+  }
+]
