@@ -30,8 +30,8 @@ function drawChart() {
 function drawPie() {
   var dataMark = google.visualization.arrayToDataTable([
   ['Gender', 'Statss'],
-  ['Female', 8],
-  ['Male', 8]
+  ['Female', 5],
+  ['Male', 5]
 ]);
 
   // Optional; add a title and set the width and height of the chart
@@ -46,11 +46,12 @@ function drawPieChart() {
   var datas = google.visualization.arrayToDataTable([
   ['Institutions', 'Statss'],
   ['Public University', 8],
+  ['Private Uni/College',1],
   ['TVETs', 2]
 ]);
 
   // Optional; add a title and set the width and height of the chart
-  var optionMark = {'title':'Bursary students by gender', 'width':550, 'height':400};
+  var optionMark = {'title':'Categories of institutions', 'width':550, 'height':400};
 
   // Display the chart inside the <div> element with id="piecharttwo"
   var chartMark = new google.visualization.PieChart(document.getElementById('chartone'));
@@ -61,7 +62,8 @@ function drawPieCharts() {
   var datass = google.visualization.arrayToDataTable([
   ['Race', 'Stats'],
   ['Blacks', 6],
-  ['Other', 4]
+  ['Coloreds',3],
+  ['Other', 1]
 ]);
 
   // Optional; add a title and set the width and height of the chart
