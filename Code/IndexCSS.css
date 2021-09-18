@@ -1,0 +1,313 @@
+/*Navigation*/
+
+header {
+    min-height: 300px;
+    background-image: -webkit-linear-gradient(270deg, rgba(255, 0, 0, 0.57), #222), url('../Resources/Background.jpg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .57), #222), url('../Resources/Background.jpg');
+    background-position: 0px 0px, 38% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+}
+
+.logo {
+    padding: 20px;
+    height: 220px;
+    width: 400px;
+    transition: transform 0.6s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo::after {
+    width: 0%;
+}
+
+
+/*Header effect and button effects*/
+
+.nav {
+    font-family: 'Anton', sans-serif;
+}
+
+.nav a {
+    position: relative;
+    padding: 15px 40px;
+    margin: 40px 40px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 35px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav a:hover {
+    background: rgb(255, 255, 255);
+    color: #111;
+    box-shadow: 0 0 40px rgb(255, 255, 255);
+    transition-delay: 0.3s;
+}
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-left: 2px solid rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.nav a:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.nav a:hover:after {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*Body*/
+
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    background: #222;
+    background-color: #222;
+    font-size: 10px;
+}
+
+
+/*Links for index*/
+
+#linksindex {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(104, 102, 102);
+    font-family: 'Anton', sans-serif;
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+}
+
+a:active {
+    color: blue;
+}
+
+#ind {
+    color: #fff;
+    padding-left: 50px;
+    font-family: 'Anton', sans-serif;
+    font-size: 9px;
+}
+
+
+/*Hover for links*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hover-container {
+    position: relative;
+}
+
+.hover-zone {
+    position: relative;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.hover-popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 70%;
+    left: 5%;
+    width: 50ch;
+    margin: min(1rem, 20px);
+    font-size: 10px;
+    background-color: rgb(71, 71, 71);
+    background-image: url("http://www.vendaland.org/images/nsfas.jpg");
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    padding: 1.5em;
+    z-index: 42;
+    transform: scale(0);
+    transition: transform 200ms ease;
+    transform-origin: 8.2% -10px;
+}
+
+.hover-zone:hover+.hover-popup,
+.hover-zone:focus+.hover-popup,
+.hover-popup:hover {
+    transform: scale(1);
+}
+
+.hover-popup :not(:first-child) {
+    margin-top: 1rem;
+}
+
+
+/*NB! FIX HOVER RADIUS*/
+
+.hover-popup::after {
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+     ::before,
+     ::after {
+        animation-delay: -1ms;
+        animation-duration: -1ms;
+        animation-iteration-count: 1;
+        background-attachment: initial;
+        scroll-behavior: auto;
+        transition-duration: 0s;
+        transition-delay: 0s;
+    }
+}
+
+
+/*Shrinking for mobile*/
+
+@media (max-width: 768px) {
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* Wave Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+/*Footer decoration*/
+
+footer {
+    background-color: rgb(255, 255, 255);
+    font-family: Helvetica;
+    padding: 40px 0 15px;
+    font-size: 15px;
+    line-height: 24px;
+    width: 100%;
+    border-top: 3px solid Black;
+    bottom: 0px;
+}
+
+footer p {
+    color: Black;
+}
+
+footer h6 {
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+language-links {
+    padding-left: 0;
+    list-style: none
+}
+
+language-links a {
+    color: black
+}
+
+page-links {
+    padding-left: 0;
+    list-style: none
+}
+
+page-links a {
+    color: black
+}
